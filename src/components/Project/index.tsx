@@ -27,9 +27,14 @@ export const Project = (): JSX.Element => {
     const fetchData = async () => {
       const data: Response = await fetch(
         `https://api.github.com/users/${userData.githubUser}/repos`
-      )
+      );
+      const projects: Response = await fetch(
+        `https://api.github.com/repos/SuperDucks/superducks-final-project-m3`
+      );
 
-      const json = await data.json();
+      const jsonUser = await data.json();
+      const jsonProjects = await projects.json();
+      const json = jsonUser.concat(jsonProjects);
 
       setRepositories(json);
 
@@ -70,7 +75,7 @@ export const Project = (): JSX.Element => {
             {repository.description}
           </Text>
           <ProjectLinks>
-            <ProjectLink target="_blank" href={repository.git_url}>
+            <ProjectLink target="_blank" href={repository.git_url.slice(4)}>
               <FaGithub /> Github Code
             </ProjectLink>
             {repository.homepage && (

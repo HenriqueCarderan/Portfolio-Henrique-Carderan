@@ -35,7 +35,7 @@ export const HeaderButtonsArea = styled(Flex, {
 
 export const StackSection = styled("section", {
   backgroundColor: "$grey4",
-  padding: "4rem 0 2rem 0",
+  padding: "5rem 0 3rem 0",
 });
 
 export const StackCards = styled("div", {
@@ -53,7 +53,7 @@ export const StackCards = styled("div", {
 });
 
 export const ProjectsArea = styled("section", {
-  padding: "4rem 0 8rem 0",
+  padding: "5rem 0 8rem 0",
 });
 
 export const ProjectsAreaSocialMediaMessage = styled("aside", {
