@@ -17,9 +17,6 @@ export const Footer = (): JSX.Element => {
         >
           <FaAngleUp />
         </Button>
-      </Container>
-
-      <Container>
         <Text type="body1" color="grey5">
           Thank you!
         </Text>
